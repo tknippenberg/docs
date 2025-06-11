@@ -28,6 +28,10 @@ This scenario allows you to move a fix from a maintenance branch line to the mai
 
 Cherry pick adds changes from the selected commit to your branch line. You will need to explicitly commit these changes after performing the cherry pick.
 
+{{% alert color="info" %}}
+When cherry picking a commit that doesn't result in any changes, potentially due to choices during conflict resolution, Studio Pro will not allow you to commit. You can abort cherry picking from the top bar to continue working.
+{{% /alert %}}
+
 ### Branch Line
 
 Choose the branch line from which you want to merge the fix.
