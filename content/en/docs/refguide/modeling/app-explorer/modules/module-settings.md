@@ -45,7 +45,11 @@ An app module is exported as a package file (*.mpk* ) that includes the full sou
 
 #### Add-on Module {#add-on-module}
 
-An add-on module is a standalone module that is not dependent on other modules. It is used as a separate element (for example, as a connector). 
+{{% alert color="warning" %}}
+The add-on module type is deprecated and will be removed in a future major version of Studio Pro.
+{{% /alert %}}
+
+An add-on module is a standalone module that is not dependent on other modules. It is used as a separate element (for example, as a connector).
 
 An add-on module is exported as a module file (*.mxmodule*) that only exposes the elements with the **Usable** export level. For more information on export levels, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/). Its source cannot be inspected by the consumer of the module.
 
@@ -55,7 +59,11 @@ When the module is set as the add-on module, it gets the letter **A** as an icon
 
 #### Solution Module {#solution-module}
 
-Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [Creationg Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
+{{% alert color="warning" %}}
+The solution module type is deprecated and will be removed in a future major version of Studio Pro.
+{{% /alert %}}
+
+Solution modules are only used for developing a solution and are an inseparable part of it. The set of solution modules used for the solution form the solution core. Solution modules are exported as a solution package and distributed as a solution to multiple consumers. For more information, see [Creating Solutions](/appstore/creating-content/sol-solutions-guide/) in the *Marketplace Guide*.
 
 When the module is set as the solution module, it gets the letter **S** as an icon.
 
@@ -63,6 +71,10 @@ When the module is set as the solution module, it gets the letter **S** as an ic
 
 {{% alert color="info" %}}
 This setting is available only for add-on and solution module types.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Because add-on and solution module types are deprecated, this setting is also deprecated.
 {{% /alert %}}
 
 This is the version number of the module. The version should be a semantic version (meaning, it should consist of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).

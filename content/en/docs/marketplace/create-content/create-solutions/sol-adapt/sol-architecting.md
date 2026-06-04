@@ -59,12 +59,12 @@ Mendix recommends design-time model adaptation over building Mendix in Mendix.
 
 For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/). These provide details on creating a dedicated app and Git repository for each customer, including for the partner that implements the solution on behalf of the customer. This allows for the following:
 
-* Full control over who can access the individual customer’s model instance via [app roles](/developerportal/general/app-roles/) 
-* Preventing access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
+* Full control over who can access the individual customer’s model instance via [app roles](/developerportal/general/app-roles/)
+* Controlling access to the development of the original solution template
 * Using all [Mendix Portal collaboration features](/developerportal/general/)
 * Data isolation per customer tenant by having dedicated environments (at least acceptance and production)
 
-The customer model instances run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled. This means that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, the consumer of the solution model can no longer unhide the implementation.
+The customer model instances can run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled (currently deprecated). This means that parts of the original solution model can be hidden from the consumer.
 
 ### Customers Without Adaptation
 
@@ -84,20 +84,22 @@ An adaptable solution can include multiple core and adaptable modules. When crea
 
 | Type | Contains | Implementation | Responsibility |
 | --- | --- | --- | --- |
-| [Solution modules](/refguide/module-settings/#solution-module) | Immutable common core with intellectual property and core logic | Hidden | Build team |
-| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the app | Visible, can be changed | Shared between build and implementation teams | 
+| [Solution modules](/refguide/module-settings/#solution-module) (deprecated) | Common core with core logic | Currently hidden; see note below | Build team |
+| [(Open) application modules](/refguide/module-settings/#app-module) | Adaptable parts of the app | Visible, can be changed | Shared between build and implementation teams |
 | [UI modules](/refguide/ui-resources-package/) | Theming | Shown, can be changed | Shared between build and implementation teams |
 | Customer-specific modules | Customer-specific additions | Visible | Implementation team |
 
-You cannot see or alter the implementation details of solution models. For example, you cannot view the logic inside a microflow, change the parameters, or edit the data model. Implementation details act as a system module for your solution.
+{{% alert color="warning" %}}
+Solution modules and their hidden-implementation behavior are deprecated. Currently, consumers cannot see or alter the implementation details of solution modules — for example, they cannot view the logic inside a microflow, change parameters, or edit the data model. This restriction will be lifted when solution modules are removed in a future major version.
+{{% /alert %}}
 
-However, documents can refer back and forth between solution and app modules. This allows for patterns with partial editability, abstract concepts, and an extensible front-end. To make things easy to maintain, it is a good practice to keep one adaptable module for each core module that is marked as a solution module. These modules will be tightly coupled, and should be considered as one module, so that the core module will have dependencies on the adaptable module, and vice versa.
+Documents can refer back and forth between solution and app modules. This allows for patterns with partial editability, abstract concepts, and an extensible front-end. To make things easy to maintain, it is a good practice to keep one adaptable module for each core module that is marked as a solution module. These modules will be tightly coupled, and should be considered as one module, so that the core module will have dependencies on the adaptable module, and vice versa.
 
-Studio Pro enforces consistency during both development and implementation, and enables finding usages while protecting the implementation.
+Studio Pro enforces consistency during both development and implementation, and enables finding usages across module boundaries.
 
 {{% alert color="info" %}}
 
-* This is an exception to the cyclic dependency rule, in that a solution module may have an open module counterpart while they work together as one module.  
+* This is an exception to the cyclic dependency rule, in that a solution module may have an open module counterpart while they work together as one module.
 * Be sure to configure the [Solution](/refguide/solution-tab/) tab of **App Settings** to allow for distribution as an adaptable solution and for creating solution modules.
 
 {{% /alert %}}
@@ -116,9 +118,13 @@ When designing the interfaces of your solutions, Mendix recommends the following
     * The architecture becomes more complex as your solution becomes more successful, so re-architect when necessary.
 * Focus on creating a minimum viable product (MVP).
 
-### Applying Intellectual Property (IP) Protection
+### Protecting the Common Core
 
-IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/).
+{{% alert color="warning" %}}
+IP protection — which hides module implementation using [add-on and solution module types](/refguide/module-settings/#module-type) — is deprecated and will be removed in a future major version. A replacement mechanism (name TBD) is planned.
+{{% /alert %}}
+
+IP protection can currently be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/).
 
 ### Mendix Platform Version
 

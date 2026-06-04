@@ -5,13 +5,17 @@ url: /refguide/configure-add-on-and-solution-modules/
 weight: 20
 ---
 
+{{% alert color="warning" %}}
+Add-on modules and solution modules, along with the IP protection they provide (Hidden/Usable export levels), are deprecated and will be removed in a future major version of Studio Pro. A replacement mechanism (name TBD) is planned that allows publishers to signal documents should not be changed, while still allowing consumers to override them.
+{{% /alert %}}
+
 ## Introduction
 
-Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/). 
+Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/).
 
-The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a standalone functionality that other users can consume in the their apps (for example, an add-on can be a connector). 
+The main difference between an add-on and a solution module is their purpose. An add-on module is developed to be a standalone functionality that other users can consume in the their apps (for example, an add-on can be a connector).
 
-Solution modules are always part of a solution, which is any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the solution core of the solution. 
+Solution modules are always part of a solution, which is any Mendix app that is suitable to be sold to multiple different customers. Solution modules are dependent on each other and are inseparable. Solutions modules form the solution core of the solution.
 
 ## Configuring Add-on and Solution Modules
 
@@ -21,7 +25,11 @@ All the content in add-on and solution modules is set to be hidden from consumer
 
 ### Changing the Export Level of a Document/Element {#export-level}
 
-Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers are able to use a certain document/element in their app. For details on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
+{{% alert color="warning" %}}
+The **Export level** property and its **Hidden** and **Usable** values are deprecated. They will be removed when add-on and solution module types are removed in a future major version.
+{{% /alert %}}
+
+Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers are able to use a certain document/element in their app. For details on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below.
 
 The **Export level** has two values:
 

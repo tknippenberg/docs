@@ -6,19 +6,23 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+Add-on modules and solution modules, along with the IP protection they provide, are deprecated and will be removed in a future major version of Studio Pro.
+{{% /alert %}}
+
 ## Introduction
 
-An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 
+An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector.
 
-A *solution* is a Mendix app that has out-of-the-box solution suitable for multiple customers. Solution, as any other app, may consist of several modules, including app modules (standard modules) and add-on modules, but it also has solution modules that form the **solution core**. Solution modules have IP protection enabled. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
+A *solution* is a Mendix app that has out-of-the-box solution suitable for multiple customers. Solution, as any other app, may consist of several modules, including app modules (standard modules) and add-on modules, but it also has solution modules that form the **solution core**. Solution modules have IP protection enabled. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 ## Limitations
 
 When consuming add-on modules and solutions, you may come across the following limitations and known issues:
 
-* When debugging add-on and solution modules, you cannot step into microflows, debugging will automatically use **Step Over**.
+* When debugging add-on and solution modules, you cannot step into microflows; debugging will automatically use **Step Over**.
 * If app modules and add-on modules or solutions have conflicting custom widgets, you are prompted with a warning showing the sources of the conflicts (module and widget package names) to find a workaround. An automatic fix is not implemented.
-* When a constant is hidden, you cannot configure its value in the **App settings**. For more information on app settings, see the [Configuration Tab](/refguide/configurations-tab/) section in *App Settings*. 
+* When a constant is hidden, you cannot configure its value in **App Settings**. For more information on app settings, see the [Configuration Tab](/refguide/configurations-tab/) section in *App Settings*.
 * If there are add-on modules imported into Studio Pro and the application is deployed for Eclipse using menu option **App > Deploy for Eclipse**, there are known build failures in Java source code.
 * If you set the default language to something other than English, and if there is no translation for that language, an error is thrown. To avoid this, set English as the default language.
 

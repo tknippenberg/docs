@@ -6,6 +6,12 @@ weight: 2
 description: "Protect intellectual property in solutions, app services, and connectors"
 ---
 
+{{% alert color="warning" %}}
+IP protection — the ability to hide module implementation from consumers using the **Hidden** export level — is deprecated and will be removed in a future major version of Studio Pro. The [add-on module and solution module types](/refguide/module-settings/#module-type) that underpin this feature are also deprecated.
+
+A replacement mechanism (name TBD) is planned. It will allow publishers to signal that consumers should not change specific documents, while still allowing overrides. Until that replacement is available, publishers who require true IP enforcement should distribute a compiled deployment package (MDA) instead of the model.
+{{% /alert %}}
+
 ## Introduction
 
 When selling solutions or components that are created in Mendix, and where the customer or partner gets access to the model, you should consider protecting the intellectual property (IP) of that content. In addition, you want to ensure that developers use the implementation as intended, and protect any custom usage metering so that customers cannot accidentally or intentionally disable it. Therefore, it is a good idea to consider applying at least some IP protection to your solutions and components.

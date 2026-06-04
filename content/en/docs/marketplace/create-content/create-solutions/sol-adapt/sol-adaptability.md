@@ -48,14 +48,13 @@ You can make logic, that is microflows, nanoflows, and workflows, adaptable by p
 
 | Purpose | Calling Flow | Called (Sub-)Flow |
 | --- | --- | --- |
-| Split (re-)usable core logic into (reusable) microflows | Solution module (usable) | Open application module |
-| Make part of the hidden core logic adaptable | Solution module (hidden) | Open application module |
-| Make part of the (re-)usable core adaptable | Solution module (usable) | Open application module |
-| Reuse core logic in an adaptable microflow | Open application module  | Solution module (usable) |
-| Split adaptable microflow | Open application module  | Open application module (newly created flow) |
+| Split (re-)usable core logic into (reusable) microflows | Solution module | Open application module |
+| Make part of the core logic adaptable | Solution module | Open application module |
+| Reuse core logic in an adaptable microflow | Open application module | Solution module |
+| Split adaptable microflow | Open application module | Open application module (newly created flow) |
 
 {{% alert color="info" %}}
-All document types can be part of the solution module, but only nanoflows, microflows, and Java actions can be made usable.
+All document types can be part of the solution module, but only nanoflows, microflows, and Java actions can currently be made usable (exposed via export level). Note that [solution modules and their export levels are deprecated](/refguide/module-settings/#solution-module).
 {{% /alert %}}
 
 ## Creating an Adaptable UI
@@ -63,11 +62,11 @@ All document types can be part of the solution module, but only nanoflows, micro
 The same patterns that can be used for microflows can be used for making pages adaptable or partially adaptable. For this, you can use a combination of pages, editable layouts, and snippets, which can also be hidden.
 
 | Object | Open App Module/UI Resource Module | Solution Module |
-| --- | --- | --- | 
-| **Page** | Adaptable pages. | Core pages can be hidden and called through microflows and nanoflows. |
-| **Snippet** | Make parts of the UI or the entire UI adaptable. | Core snippets can be hidden as long as it is for reuse in hidden core pages. |
-| **Layout** | Main layout for the application. Use a solution-specific [master layout](/refguide/layout/#master-layout) to enable changing the layout of all (adaptable and hidden) pages by the customer. | Core layouts can be hidden and use an adaptable master layout. |
-| **Building block** | Building blocks that are supposed to be used during adaptation need to reside in an open module. | Building blocks that are used during development of the core solution can be hidden. |
+| --- | --- | --- |
+| **Page** | Adaptable pages. | Core pages can currently be hidden and called through microflows and nanoflows. |
+| **Snippet** | Make parts of the UI or the entire UI adaptable. | Core snippets can currently be hidden as long as it is for reuse in hidden core pages. |
+| **Layout** | Main layout for the application. Use a solution-specific [master layout](/refguide/layout/#master-layout) to enable changing the layout of all pages by the customer. | Core layouts can currently be hidden and use an adaptable master layout. |
+| **Building block** | Building blocks that are supposed to be used during adaptation need to reside in an open module. | Building blocks that are used during development of the core solution can currently be hidden. |
 | **SASS files** | Define the theme and look and feel of your app. | No SASS definition support. Usage of existing theme and design properties as well as additional styling can be done through inline styling only. |
 
 {{% alert color="info" %}}
@@ -111,16 +110,20 @@ For more information, see [Constant Default Value](/refguide/constants/#default-
 To make the application translatable during implementation, all translatable documents need to be stored in open application modules. Using the [batch translate](/refguide/batch-translate/) and [batch replace](/refguide/batch-replace/) features, the text can be translated or updated during implementation. This can be done, for example, to implement jargon by changing a default concept like “Asset” into a customer-specific word like “Car” .
 
 {{% alert color="info" %}}
-Only adaptable content can be translated, since protected content is locked down.
+Only content in open application modules can be translated. Content in solution modules is currently locked down due to IP protection, which is deprecated and will be removed in a future major version.
 {{% /alert %}}
 
 Variables cannot easily be translated, nor can text be changed in a protected microflow, since this is locked down. As a workaround, consider using an editable Enumeration as an internationalization map combined with the [getCaption](/refguide/enumerations-in-expressions/#getCaption) function. 
 
 ## Java Source Code Protection
 
-Setting the export level to **Hidden** on a Java action prevents the action from being unpacked in the app directory at the same path as regular modules. Your Java code is put in a package, but no obfuscation or other security measures take place. This means that reverse engineering the package would reveal your source code.
+{{% alert color="warning" %}}
+The **Hidden** export level for Java actions is deprecated as part of the deprecation of [add-on and solution module types](/refguide/module-settings/#module-type).
+{{% /alert %}}
 
-Mendix does not offer a facility to further protect intellectual property in your Java files. For further protection, such as to obfuscate your source code, Mendix recommends using other software.
+Currently, setting the export level to **Hidden** on a Java action prevents the action from being unpacked in the app directory at the same path as regular modules. The Java code is put in a package, but no obfuscation or other security measures take place — reverse engineering the package would still reveal the source code.
+
+Mendix does not offer a facility to protect intellectual property in Java files. For source code obfuscation, Mendix recommends using third-party software.
 
 ## Read More
 

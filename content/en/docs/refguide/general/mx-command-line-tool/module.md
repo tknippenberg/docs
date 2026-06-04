@@ -113,7 +113,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 * Z indicates the error details:
 
-    * 1 – Module you are trying to import is protected and cannot be imported.
+    * 1 – Module you are trying to import is protected and cannot be imported. Note: IP protection and protected modules are deprecated.
     * 2 – Module you are trying to import is a Theme module and cannot be imported.
     * 3 – Project already contains a module with the same name as the module you are importing. Thus the module cannot be imported.
     * 4 – No module is found in the MPK package.
@@ -129,7 +129,7 @@ For example:
 Importing protected module is not supported
 ```
 
-Exit code 111
+Exit code 111 (note: IP protection and protected modules are deprecated)
 
 or
 

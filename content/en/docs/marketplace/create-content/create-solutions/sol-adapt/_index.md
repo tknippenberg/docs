@@ -32,7 +32,7 @@ ISVs can create and sell solutions that can be adapted for every individual cust
 
 In larger enterprises, a common occurrence is having various different departments or regionals with the same need. Adaptable solutions allow for the centralized development of the core solution, while different teams can make adaptations themselves.  
 
-Through upgrades, the centralized team can push common functionality to the different teams. An IP-protected and immutable core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and the adaptation effort.
+Through upgrades, the centralized team can push common functionality to the different teams. A well-defined and stable common core ensures that the implementation teams only adapt what is needed in order to minimize the impact of upgrades and the adaptation effort.
 
 ## Solution Lifecycle {#lifecycle}
 
@@ -54,7 +54,7 @@ The customer implementation is a separate upgradable model instance (fork). It s
 
 {{< figure src="/attachments/appstore/create-content/create-solutions/sol-adapt/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" class="no-border" >}}
 
-The separate model instance allows the implementation team to fully customize all [non-IP protected](#ip-protection) functionality. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is.
+The separate model instance allows the implementation team to fully customize all functionality that is not part of the [common core](#ip-protection). Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is.
 
 {{% alert color="info" %}}
 It is at the solution developer's discretion to determine who can implement a solution, who can access the model, and whether their delivery model is software-as-a-service (SaaS) or a solution template with a subscription for updates.
@@ -76,14 +76,20 @@ These different parts work together in the customer implementation. It is import
 
 This table describes the three main functional parts in more detail:
 
-| Part | IP-Protected | Responsibility | Upgradable | Purpose |
-| --- | --- | --- | --- | --- |
-| Immutable common core | Yes | Build team | Yes, drop-in | Core of the application (for example, data model, workflow actions, standard integrations) |
-| Adaptable core | No | Build team for shared documents, implementation team for customer documents | Yes, fine-grained merge | Customer specific changes to the model (for example: workflows, data model extensions, customizable pages and snippets, theming, extendable microflows, translation and jargon) |
-| Customer-specific extensions | No | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
+| Part | Responsibility | Upgradable | Purpose |
+| --- | --- | --- | --- |
+| Common core | Build team | Yes, drop-in | Core of the application (for example, data model, workflow actions, standard integrations) |
+| Adaptable core | Build team for shared documents, implementation team for customer documents | Yes, fine-grained merge | Customer-specific changes to the model (for example: workflows, data model extensions, customizable pages and snippets, theming, extendable microflows, translation and jargon) |
+| Customer-specific extensions | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
 
-## IP Protection {#ip-protection}
+## Protecting the Common Core {#ip-protection}
 
-To ensure that the intellectual property (IP) that is created while [building the solution core](#lifecycle) is not disclosed to implementation teams or to customers, you can [apply IP protection](/appstore/creating-content/sol-ip-protection/). This will also render those components immutable, and make it easier to upgrade, as there will never be any merge conflicts.
+{{% alert color="warning" %}}
+The IP protection mechanism based on [add-on and solution module types](/refguide/module-settings/#module-type) — which hides module implementation from consumers — is deprecated and will be removed in a future major version of Studio Pro. A replacement mechanism (name TBD) is planned.
+{{% /alert %}}
+
+To protect the common core from unintended changes by implementation teams or customers, you can currently [apply IP protection](/appstore/creating-content/sol-ip-protection/). When hidden, components are immutable and easier to upgrade, as there are no merge conflicts in protected content.
+
+Publishers who require enforcement of IP for commercial reasons should distribute a compiled deployment package (MDA) instead of the model, which also prevents inspection in Studio Pro.
 
 ## Documents in This Section
