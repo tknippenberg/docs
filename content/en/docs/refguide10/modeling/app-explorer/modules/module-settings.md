@@ -35,6 +35,10 @@ Select the **Export** tab:
 
 ### Module Type {#module-type}
 
+{{% alert color="warning" %}}
+The [add-on module](#add-on-module) type and intellectual property (IP) protection through the **Export level** property are deprecated as of Mendix 11. They are fully supported in Studio Pro 10, and nothing described in this section changes for Studio Pro 10 apps. If you plan to upgrade, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/) in the *Studio Pro 11 Guide*.
+{{% /alert %}}
+
 There are three types of modules, and the choice of type depends on the purpose of the module. You can choose one the following:
 
 * [App module](#app-module)

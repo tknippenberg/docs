@@ -6,13 +6,17 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+The add-on module type and intellectual property (IP) protection are deprecated as of Studio Pro 11.18, and are removed in Studio Pro 12.0. Add-on modules and solutions that you already consume keep working for the entire support duration of Mendix 11, and no action is required now. For what changes for consumers, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ## Introduction
 
 An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 
 
 A *solution* is a Mendix app that has out-of-the-box solution suitable for multiple customers. Solution, as any other app, may consist of several modules, including app modules (standard modules) and add-on modules, but it also has solution modules that form the **solution core**. Solution modules have IP protection enabled. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
 
-## Limitations
+## Limitations {#limitations}
 
 When consuming add-on modules and solutions, you may come across the following limitations and known issues:
 
@@ -51,6 +55,7 @@ The module is deleted from your app.
 
 ## Read More
 
+* [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [How to Use Marketplace Content](/appstore/use-content/)
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)

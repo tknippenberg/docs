@@ -20,6 +20,9 @@ The **Security Overview** summarizes the app's security for a selected user role
 2. In the **Show access for user role** list, select the user role for which you want to view the security summary.  (The anonymous and administrator user roles are marked with  `(Anonymous)` and `(Administrator)` respectively).
 3. Optionally, select a module in the sidebar of the overview.
     Selecting a module filters the content in the **Entity access**, **Page access**, **Microflow access**, and **Nanoflow access** tabs. The list of modules does not show the System module or any protected modules.
+{{% alert color="info" %}}
+Here, a protected module means an [add-on or solution module](/refguide/module-settings/#module-type). Intellectual property protection of those modules is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0, which means this exclusion no longer applies once a module is not protected. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
 
 ## Security Overview Contents
 

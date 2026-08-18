@@ -72,6 +72,10 @@ Conceiving a solution for adaptation requires an understanding of your customers
 
 {{< figure src="/attachments/appstore/create-content/create-solutions/sol-adapt/solution-three-parts.png" alt="Three parts of the adaptable solution" class="no-border" >}}
 
+{{% alert color="warning" %}}
+The tradeoff described below rests on [IP protection](#ip-protection), which is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. The successor boundaries are soft: a publisher can mark a document as not-to-be-changed, and the consumer can override that. This means a document can be part of the common core while still being adaptable in the exceptional case, so the strict split between an immutable core and an adaptable core relaxes. It also means the core is no longer guaranteed to be unmodified, so a drop-in upgrade becomes a merge. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 These different parts work together in the customer implementation. It is important to maintain these distinctions, because there is an inherent tradeoff: what is part of the common core and IP-protected cannot be adapted or modified, while what can be adapted can never be protected. This boundary can be created at a fine-grained level. All adaptations done to extensions and to the adaptable core can make use of functionality from the common core. For more information, see the [Application Design](/appstore/creating-content/sol-architecting/#app-design) section of *How to Architect Adaptable Solutions*.
 
 This table describes the three main functional parts in more detail:
@@ -83,6 +87,10 @@ This table describes the three main functional parts in more detail:
 | Customer-specific extensions | No | Implementation team | Not needed | Added features for the customer (for example, integration with existing systems, additional visualizations) |
 
 ## IP Protection {#ip-protection}
+
+{{% alert color="warning" %}}
+IP protection is deprecated as of Studio Pro 11.18, and is removed in Studio Pro 12.0. It remains fully supported for the entire support duration of Mendix 11. There is no technical successor for keeping an implementation concealed from a customer. For what replaces it, what does not, and what this means for ISVs as opposed to enterprise platform teams, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
 
 To ensure that the intellectual property (IP) that is created while [building the solution core](#lifecycle) is not disclosed to implementation teams or to customers, you can [apply IP protection](/appstore/creating-content/sol-ip-protection/). This will also render those components immutable, and make it easier to upgrade, as there will never be any merge conflicts.
 

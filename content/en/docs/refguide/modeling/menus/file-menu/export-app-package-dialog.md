@@ -35,6 +35,10 @@ You can only see the **Solution** and **Source Package** settings when you have 
 
 Choose this package type if you develop your app as a solution and it has certain documents or elements hidden from consumers. Your app is exported as a *.mxsolution* file; add-on and solution modules are converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/).
 
+{{% alert color="warning" %}}
+Hiding documents and elements from consumers is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0, and the *.mxmodule* format goes with it. Solution packages themselves are not deprecated. Export behavior is unchanged for the entire support duration of Mendix 11. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ### Source Package
 
 {{% alert color="info" %}}

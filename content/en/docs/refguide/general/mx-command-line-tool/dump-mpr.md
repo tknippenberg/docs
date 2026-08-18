@@ -24,6 +24,10 @@ These are the `OPTIONS`:
 | `--exclude-protected-modules` | | Exclude protected modules from the JSON export. |
 | `--module-names` | A single module name, or a comma-separated list of module names. | Filters the results on the supplied modules and limits the JSON export. |
 
+{{% alert color="warning" %}}
+For `--exclude-protected-modules`, a protected module means an [add-on or solution module](/refguide/module-settings/#module-type). Intellectual property protection of those modules is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0, so this option has no modules to exclude once no module is protected. The option remains supported for the entire support duration of Mendix 11. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ### Examples
 
 These are valid examples:

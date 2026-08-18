@@ -6,6 +6,10 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+The add-on module type and intellectual property (IP) protection are deprecated as of Mendix 11. They are fully supported in Studio Pro 10, and nothing on this page changes for Studio Pro 10 apps. Add-on modules and solutions that you consume keep working. For what changes for consumers after upgrading, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/) in the *Studio Pro 11 Guide*.
+{{% /alert %}}
+
 ## Introduction
 
 An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 

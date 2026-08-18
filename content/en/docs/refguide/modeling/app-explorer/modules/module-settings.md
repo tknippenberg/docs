@@ -31,6 +31,10 @@ The **Configure** tab contains the module's basic settings.
 
 ### Module Type {#module-type}
 
+{{% alert color="warning" %}}
+The [add-on module](#add-on-module) type and intellectual property (IP) protection through the **Export level** property are deprecated as of Studio Pro 11.18, and are removed in Studio Pro 12.0. They remain fully supported for the entire support duration of Mendix 11. [Solution modules](#solution-module) continue to work, but IP protection of solution modules is deprecated as well. Solutions are not deprecated. For what changes and what replaces it, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 There are three types of modules, and the choice of type depends on the purpose of the module. You can choose one the following:
 
 * [App module](#app-module)
@@ -171,5 +175,6 @@ Modules imported from the Marketplace are automatically set to **Marketplace mod
 * [Modules](/refguide/modules/)
 * [Updating Marketplace Modules](/refguide/updating-marketplace-modules/)
 * [Configure Add-on and Solution Modules for Publishing](/refguide/configure-add-on-and-solution-modules/)
+* [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/)
 * [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/)
 * [Creating Solutions](/appstore/creating-content/sol-solutions-guide/)

@@ -48,6 +48,10 @@ The command will output the version of the module to the command line output.
 
 ## mx set-module-version Command {#set-module-version}
 
+{{% alert color="warning" %}}
+The add-on module type is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. It remains fully supported for the entire support duration of Mendix 11. [Module version](/refguide/module-settings/#module-version) is available for every module type in Studio Pro 11.12 and above. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 The `mx set-module-version` command changes the version of an add-on module.
 
 ### Usage
