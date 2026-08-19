@@ -6,6 +6,12 @@ weight: 2
 description: "Protect intellectual property in solutions, app services, and connectors"
 ---
 
+{{% alert color="warning" %}}
+Intellectual property (IP) protection is deprecated as of Studio Pro 11.18, and is removed in Studio Pro 12.0. Everything on this page remains fully supported for the entire support duration of Mendix 11.
+
+There is **no technical successor for commercial IP protection**. The replacement capabilities are soft boundaries that the consumer can override, which addresses governance of a shared core but does not prevent a paying customer from copying an implementation or disabling a check. This affects the [usage metering](#metering) and [entitlement management](#entitlement) guidance on this page in particular. Before you build a business case on this page, read [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ## Introduction
 
 When selling solutions or components that are created in Mendix, and where the customer or partner gets access to the model, you should consider protecting the intellectual property (IP) of that content. In addition, you want to ensure that developers use the implementation as intended, and protect any custom usage metering so that customers cannot accidentally or intentionally disable it. Therefore, it is a good idea to consider applying at least some IP protection to your solutions and components.
@@ -100,6 +106,10 @@ To protect your app services, connectors, and modules, follow these steps:
 
 ### Protecting Usage Metering {#metering}
 
+{{% alert color="warning" %}}
+This guidance depends on the consumer being unable to edit the metering implementation. Because IP protection is deprecated and the replacement boundaries are consumer-overridable, there is **no planned platform capability for tamper-proof usage metering**. The legal clause described in this section becomes the primary control rather than a backstop. See [Usage Metering and Entitlement Enforcement](/refguide/migrate-add-on-and-solution-modules/#metering).
+{{% /alert %}}
+
 To ensure customers do not accidentally or intentionally break usage metering, it is a good practice to hide the implementation of custom usage metering in a protected module.
 
 There are two common scenarios for custom usage metering:
@@ -116,7 +126,11 @@ These are the best practices for usage metering:
 * Have a legal agreement for your solution or app service in place. This needs to include a clause requiring the customer to ensure that any custom usage metering functions as intended.
   This means that where for some reason you cannot protect the metering implementation at the technical level, you are still covered at the legal level.
 
-### Entitlement Management
+### Entitlement Management {#entitlement}
+
+{{% alert color="warning" %}}
+Entitlement management is described here as a layer on top of IP protection. A signed license key is only as strong as the logic that validates it, so where a consumer can edit the validating microflow, edition gating, rate limiting, key expiry, and runtime URL binding all become advisory. There is **no planned platform capability for enforceable entitlement validation**. See [Usage Metering and Entitlement Enforcement](/refguide/migrate-add-on-and-solution-modules/#metering).
+{{% /alert %}}
 
 Applying IP protection prevents the people that consume your solution from inspecting details of the model and from copying the implementation. On top of that, Mendix recommends implementing entitlement management.
 

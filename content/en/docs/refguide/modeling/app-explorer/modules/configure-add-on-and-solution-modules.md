@@ -5,6 +5,10 @@ url: /refguide/configure-add-on-and-solution-modules/
 weight: 20
 ---
 
+{{% alert color="warning" %}}
+The add-on module type and intellectual property (IP) protection through the **Export level** property are deprecated as of Studio Pro 11.18, and are removed in Studio Pro 12.0. Everything on this page remains fully supported for the entire support duration of Mendix 11. For what changes, what replaces it, and what has no replacement, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ## Introduction
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have intellectual property (IP) protection enabled and have the *.mxmodule* extension. For more information on IP protection, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/). 
@@ -20,6 +24,10 @@ You can mark a standard module (app module) as an add-on or solution module at a
 All the content in add-on and solution modules is set to be hidden from consumers by default (as modules have IP protection enabled). You can then decide what parts of the module you would like to make as usable, if any. For example, you can allow consumers to use certain entities and attributes. 
 
 ### Changing the Export Level of a Document/Element {#export-level}
+
+{{% alert color="warning" %}}
+The **Export level** property is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. It continues to work for the entire support duration of Mendix 11. The successors are separate capabilities for each of its two values: **Hidden** documents map to a read-only status that the consumer can override, and **Usable** documents map to a declared entry point. Usability of entities, attributes, and associations has no successor. See [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
 
 Documents and some elements in the add-on and solution modules have the **Export level** property. This property defines whether the consumers are able to use a certain document/element in their app. For details on what documents and elements are supported for add-on and solution modules, see the [Supported Documents](#supported-documents) section below. 
 
@@ -103,6 +111,7 @@ If for some reason you switch the add-on and solution module to an app module (f
 ## Read More
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
+* [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
 * [How to Use Marketplace Content](/appstore/use-content/)
 * [Import and Export Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)

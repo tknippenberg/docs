@@ -5,6 +5,10 @@ url: /refguide10/configure-add-on-and-solution-modules/
 weight: 20
 ---
 
+{{% alert color="warning" %}}
+The add-on module type and intellectual property (IP) protection through the **Export level** property are deprecated as of Mendix 11, and are planned for removal in a future major version of Mendix. They are fully supported in Studio Pro 10, and nothing on this page changes for Studio Pro 10 apps. If you publish add-on modules or solutions and plan to upgrade, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/) in the *Studio Pro 11 Guide*.
+{{% /alert %}}
+
 ## Introduction
 
 Add-on and solution modules are special types of modules that are developed to add functionality to an app. They have [intellectual property (IP) protection](/appstore/creating-content/sol-ip-protection/) enabled, and they have the *.mxmodule* extension. For more information on IP protection, see . 

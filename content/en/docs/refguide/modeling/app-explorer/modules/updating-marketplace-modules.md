@@ -46,4 +46,5 @@ For more information on package IDs and how they are assigned, see [Module Setti
 * [Modules](/refguide/modules/)
 * [Module Settings](/refguide/module-settings/)
 * [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)
+* [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/)
 * [Combining Changes and Resolving Conflicts](/refguide/resolving-conflicts/)

@@ -78,7 +78,11 @@ Make sure to test this scenario before applying any customizations, since this o
 
 ## Application Design {#app-design}
 
-### Combining Module Types
+### Combining Module Types {#combining-module-types}
+
+{{% alert color="warning" %}}
+This section rests on solution modules hiding their implementation, which is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. The guidance is accurate and supported for the entire support duration of Mendix 11. Two parts of it are expected to change: the **Implementation** column no longer reads **Hidden** once IP protection is removed, and the practice of pairing each core module with an open counterpart is intended to be replaced by declared substitution points within a single module. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
 
 An adaptable solution can include multiple core and adaptable modules. When creating a solution, it is important to make a distinction between the different module types and their purpose in the application model:
 
@@ -119,6 +123,10 @@ When designing the interfaces of your solutions, Mendix recommends the following
 ### Applying Intellectual Property (IP) Protection
 
 IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [Applying Intellectual Property Protection](/appstore/creating-content/sol-ip-protection/).
+
+{{% alert color="warning" %}}
+IP protection is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. It remains fully supported for the entire support duration of Mendix 11. There is no technical successor for concealing an implementation from a customer. See [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
 
 ### Mendix Platform Version
 

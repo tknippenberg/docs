@@ -16,6 +16,10 @@ There are *.mpk* packages that can contain apps, modules, or widgets, *.mxmodule
 When you have an app package, you cannot import individual modules or widgets from within it. 
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+The add-on module type and the *.mxmodule* package format are deprecated as of Studio Pro 11.18, and are removed in Studio Pro 12.0. Importing and exporting them remains fully supported for the entire support duration of Mendix 11. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 You can import and export the following:
 
 * Apps

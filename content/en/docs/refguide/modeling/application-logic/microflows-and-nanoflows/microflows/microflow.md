@@ -66,6 +66,8 @@ Page and microflow URL patterns must be unambiguous. If two patterns match the s
 
 {{% alert color="info" %}}
 This property is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
+
+**Export level** is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. It remains supported for the entire support duration of Mendix 11. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
 {{% /alert %}}
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution. 

@@ -83,6 +83,8 @@ The name has to be unique only within the domain model of a module. You can have
 **Export level** is only available for add-on and solution modules. For more information on types of modules, see the [Module Types](/refguide/modules/#module-types) section in *Modules*. 
 
 If the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
+
+**Export level** is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0. It remains supported for the entire support duration of Mendix 11. Usability of entities, attributes, and associations has no successor yet. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
 {{% /alert %}}
 
 #### Generalization {#generalization}

@@ -5,6 +5,10 @@ weight: 80
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+Solutions are not deprecated, and the settings on this tab are unaffected. However, intellectual property (IP) protection of solution modules is deprecated as of Studio Pro 11.18 and is removed in Studio Pro 12.0, which changes how the solution core is protected. For details, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 ## Introduction
 
 Settings on this tab allow you to configure application distribution as an [adaptable solution](/appstore/creating-content/sol-solutions-guide/). 

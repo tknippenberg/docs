@@ -25,6 +25,10 @@ The sections below present categories and tables for all the different kinds of 
 
 ## Module Types {#module-types}
 
+{{% alert color="warning" %}}
+The add-on module type and intellectual property (IP) protection through the **Export level** property are deprecated as of Studio Pro 11.18, and are removed in Studio Pro 12.0. They remain fully supported for the entire support duration of Mendix 11. Solutions are not deprecated. For what changes and what replaces it, see [Migrating from Add-on Modules and IP Protection](/refguide/migrate-add-on-and-solution-modules/).
+{{% /alert %}}
+
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 
 
 There are the following type of modules:
